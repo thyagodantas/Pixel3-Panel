@@ -1,8 +1,7 @@
 
 # Administrative Panel | Pixel3
 
-The admin panel was created to make the Pixel3 webapp dynamic.
-
+The admin panel was created to make the Pixel3 webapp dynamic. The posted project is not complete as it is still active.
 
 ## Technologies
 
