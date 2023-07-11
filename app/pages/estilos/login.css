@@ -1,0 +1,19 @@
+body {
+  background-image: url(../images/fundo-login.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.btn-primary {
+  background-color: #082385;
+  border: 1px solid #092ba3;
+}
+
+.btn-primary:hover {
+  background-color: #1737ad;
+  border: 1px solid #1737ad;
+}
+
+.logo {
+  max-width: 40%;
+}
