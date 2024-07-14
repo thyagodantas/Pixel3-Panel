@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+date_default_timezone_set('America/Recife');
 
 $autoload = function ($class) {
     $class_file = str_replace('\\', '/', $class) . '.php';
@@ -13,14 +14,14 @@ $autoload = function ($class) {
 
 spl_autoload_register($autoload);
 
-define('INCLUDE_PATH', 'http://painel.projetoexemplo.com/');
-define('INCLUDE_PATH_STATIC', 'http://painel.projetoexemplo.com/app/');
-define('INCLUDE_PATH_STYLE', 'http://painel.projetoexemplo.com/app/pages/estilos/');
+define('INCLUDE_PATH', 'http://painel.altekweb.com.br/');
+define('INCLUDE_PATH_STATIC', 'http://painel.altekweb.com.br/app/');
+define('INCLUDE_PATH_STYLE', 'http://painel.altekweb.com.br/app/pages/estilos/');
 
 //DB
 define('HOST', 'localhost');
-define('DATABASE', 'pixelthree');
-define('USER', 'admin');
+define('DATABASE', 'altekweb');
+define('USER', 'root');
 define('PASSWORD', '2003');
 
 //Menu Active

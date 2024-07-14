@@ -29,7 +29,6 @@ class ClientesModel
     {
 
         $count = MySql::connect()->query("SELECT COUNT(*) FROM clientes")->fetchColumn();
-        $count = MySql::connect()->query("SELECT COUNT(*) FROM clientes")->fetchColumn();
         return $count;
     }
 }

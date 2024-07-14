@@ -9,45 +9,40 @@
                     <li class="section-menu"><a href="<?php echo INCLUDE_PATH; ?>"><i class="fa-regular fa-house"></i>
                             Dashboard</a>
                     </li>
-                    <li <?php selecionadoMenu('clientes'); ?>><a href="<?php echo INCLUDE_PATH; ?>clientes"><i
-                                class="fa-regular fa-user-tag"></i>
+                    <li <?php selecionadoMenu('clientes'); ?>><a href="<?php echo INCLUDE_PATH; ?>clientes"><i class="fa-regular fa-user-tag"></i>
                             Clientes
                         </a>
                     </li>
-                    <li <?php selecionadoMenu('avaliacoes'); ?>><a href="<?php echo INCLUDE_PATH; ?>"><i
-                                class="fa-regular fa-file-lines"></i> Avaliações
+                    <li <?php selecionadoMenu('avaliacoes'); ?>><a href="<?php echo INCLUDE_PATH; ?>avaliacoes"><i class="fa-regular fa-file-lines"></i> Avaliações
+                        </a>
+                    </li>
+                    <li <?php selecionadoMenu('portifolio'); ?>><a href="<?php echo INCLUDE_PATH; ?>portifolio"><i class="fa-regular fa-browser"></i> Portifólio
                         </a>
                     </li>
                     <li <?php selecionadoMenu('usuarios');
-                        verificaPermissao(1) ?>><a href="<?php echo INCLUDE_PATH; ?>"><i
-                                class="fa-regular fa-users"></i> Usuários
+                        verificaPermissao(1) ?>><a href="<?php echo INCLUDE_PATH; ?>usuarios"><i class="fa-regular fa-users"></i> Usuários
                         </a>
                     </li>
-                    <li <?php selecionadoMenu('portifolio'); ?>><a href="<?php echo INCLUDE_PATH; ?>"><i
-                                class="fa-regular fa-browser"></i> Portifólio
-                        </a>
+                    <li class="section-menu inactiveLink"><a href="#"><i class="fa-regular fa-file-user"></i>
+                            Minha
+                            conta</a>
                     </li>
-                    <br>
-                    <li class="section-menu"><a href="<?php echo INCLUDE_PATH; ?>"><i
-                                class="fa-regular fa-file-user"></i> Minha conta</a>
-                    </li>
-                    <li <?php selecionadoMenu('dados'); ?>><a href="<?php echo INCLUDE_PATH; ?>"><i
-                                class="fa-regular fa-user-pen"></i> Alterar dados
+                    <li <?php selecionadoMenu('dados'); ?>><a href="<?php echo INCLUDE_PATH; ?>dados"><i class="fa-regular fa-user-pen"></i> Alterar dados
                         </a>
                     </li>
                 </ul>
             </nav>
             <nav class="cargo-menu">
                 <ul>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>"><?php
+                    <li class="inactiveLink"><a href="<?php echo INCLUDE_PATH; ?>"><?php
 
-                                                                if ($_SESSION['cargo'] == 1) {
-                                                                    echo '<i class="fa-regular fa-crown"></i> Administrador';
-                                                                } else {
-                                                                    echo '<i class="fa-sharp fa-regular fa-rectangle-code"></i> Desenvolvedor';
-                                                                }
+                                                                                    if ($_SESSION['cargo'] == 1) {
+                                                                                        echo '<i class="fa-regular fa-crown"></i> Administrador';
+                                                                                    } else {
+                                                                                        echo '<i class="fa-sharp fa-regular fa-rectangle-code"></i> Desenvolvedor';
+                                                                                    }
 
-                                                                ?></a>
+                                                                                    ?></a>
                     </li>
                 </ul>
             </nav>
@@ -61,12 +56,11 @@
         </div>
     </div>
     <div class="user-menu">
-        <a class="open-menu" href=""><?php echo $_SESSION['nome']; ?> <i
-                class="fa-regular fa-square-arrow-down"></i></a>
+        <a class="open-menu" href=""><?php echo $_SESSION['nome']; ?> <i class="fa-regular fa-square-arrow-down"></i></a>
     </div>
 
-    <div class="mail-menu">
-        <a href="">
+    <div class="mail-menu" <?php verificaPermissao(1) ?>>
+        <a href="<?php echo INCLUDE_PATH; ?>emails">
             <i class="fa-solid fa-envelope"></i>
         </a>
     </div>
